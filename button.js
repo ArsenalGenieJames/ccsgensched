@@ -57,7 +57,7 @@ function showContent(type) {
         const gpa = gpaData[selectedGrade];
         contentArea.innerHTML = `
         <h3>${selectedGrade} Year GPA</h3>
-        <ul class="list-group">
+        <ul class="list-group mb-4">
             <li class="list-group-item">First Semester GPA: ${gpa.firstSem}</li>
             <li class="list-group-item">Second Semester GPA: ${gpa.secondSem}</li>
         </ul>
