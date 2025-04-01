@@ -1,0 +1,16 @@
+#greeting {
+    font-size: 20px;
+    color: #333;
+}
+
+
+@media (max-width: 576px) {
+#greeting {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -4px;
+}
+.navbar-brand {
+    font-size: 20px;
+}
+}
