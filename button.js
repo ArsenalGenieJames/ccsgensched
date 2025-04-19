@@ -7,14 +7,13 @@ function showContent(type) {
         <div id="image-slider" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/firstyear_deanslist.jpg" class="d-block w-100" alt="Image 1">
-            </div>
-            
-            <div class="carousel-item">
-                <img src="./img/ici_panelist.jpg" class="d-block w-100 icipanel" alt="Image 2">
+            <img src="./img/firstyear_deanslist.jpg" class="d-block w-100 img-fluid" alt="Image 1" style="object-fit: cover; height: 300px;">
             </div>
             <div class="carousel-item">
-                <img src="./img/ui_champion.jpg" class="d-block w-100" alt="Image 3">
+            <img src="./img/ici_panelist.jpg" class="d-block w-100 img-fluid" alt="Image 2" style="object-fit: cover; height: 800px;">
+            </div>
+            <div class="carousel-item">
+            <img src="./img/ui_champion.jpg" class="d-block w-100 img-fluid" alt="Image 3" style="object-fit: cover; height: 300px;">
             </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#image-slider" data-bs-slide="prev">
