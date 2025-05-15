@@ -38,6 +38,19 @@ const scheduleData = {
     const tableBody = document.querySelector('table.table-zebra tbody');
     const data = scheduleData[day] || [];
 
+    // Reset all day headers to default state
+    const dayHeaders = document.querySelectorAll('th[onclick^="handleClick"]');
+    dayHeaders.forEach(header => {
+      header.classList.remove('bg-primary', 'text-white');
+      header.classList.add('hover:bg-primary', 'hover:text-white');
+    });
+
+    // Highlight selected day
+    const selectedHeader = document.querySelector(`th[onclick="handleClick('${day}')"]`);
+    if (selectedHeader) {
+      selectedHeader.classList.add('bg-primary', 'text-white');
+    }
+
     tableBody.innerHTML = '';
 
     data.forEach((item, index) => {
@@ -81,8 +94,14 @@ const scheduleData = {
     updateTime();
     setInterval(updateTime, 1000);
 
-    // Set initial day to current day
+    // Set initial day to current day and highlight it
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = days[new Date().getDay()];
     handleClick(today);
+
+    // Highlight current day header
+    const todayHeader = document.querySelector(`th[onclick="handleClick('${today}')"]`);
+    if (todayHeader) {
+      todayHeader.classList.add('bg-primary', 'text-white');
+    }
   });
