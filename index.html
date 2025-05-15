@@ -12,33 +12,33 @@
   <body>
 
     <!-- Navbar -->
-    <div class="navbar bg-base-100  px-4">
+    <div class="navbar bg-base-100 px-2 sm:px-4">
       <div class="flex-1">
-        <a class="btn btn-ghost text-2xl font-bold text-primary">Genie James Arsenal</a>
+        <a class="btn btn-ghost text-lg sm:text-xl md:text-2xl font-bold text-primary truncate">Genie James Arsenal</a>
       </div>
-      <div class="flex gap-6 items-center">
-        <div class="greeting text-lg font-semibold text-secondary"></div>
+      <div class="flex gap-2 sm:gap-4 md:gap-6 items-center">
+        <div class="greeting text-sm sm:text-base md:text-lg font-semibold text-secondary"></div>
       </div>
     </div>
 
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row gap-8">
             <!-- Left Side -->
-            <div class="md:w-1/2">
+            <div class="w-full md:w-1/2">
                 <!-- Day Selector -->
-                <h1 class="text-2xl font-bold text-center mb-4 mt-5">Subject Schedule for the week</h1>
+                <h1 class="text-xl md:text-2xl font-bold text-center mb-4 mt-5">Subject Schedule for the week</h1>
                 <div class="overflow-x-auto my-8">
-                    <div class="mx-auto w-fit">
+                    <div class="mx-auto w-full md:w-fit">
                     <table class="table table-lg bg-base-100 shadow-lg rounded-xl">
                         <thead>
                         <tr>
-                            <th onclick="handleClick('Monday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Monday</th>
-                            <th onclick="handleClick('Tuesday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Tuesday</th>
-                            <th onclick="handleClick('Wednesday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Wednesday</th>
-                            <th onclick="handleClick('Thursday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Thursday</th>
-                            <th onclick="handleClick('Friday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Friday</th>
-                            <th onclick="handleClick('Saturday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Saturday</th>
-                            <th onclick="handleClick('Sunday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">Sunday</th>
+                            <th onclick="handleClick('Monday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Monday</th>
+                            <th onclick="handleClick('Tuesday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Tuesday</th>
+                            <th onclick="handleClick('Wednesday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Wednesday</th>
+                            <th onclick="handleClick('Thursday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Thursday</th>
+                            <th onclick="handleClick('Friday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Friday</th>
+                            <th onclick="handleClick('Saturday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Saturday</th>
+                            <th onclick="handleClick('Sunday')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-sm md:text-base">Sunday</th>
                         </tr>
                         </thead>
                     </table>
@@ -47,15 +47,15 @@
             
                 <!-- Schedule Table -->
                 <div class="overflow-x-auto mb-10">
-                    <div class="mx-auto w-full px-4">
+                    <div class="mx-auto w-full px-2 md:px-4">
                     <table class="table table-zebra table-lg bg-base-100 shadow-lg rounded-xl">
                         <thead>
                         <tr class="bg-base-300">
-                            <th class="text-lg font-bold">Subject</th>
-                            <th class="text-lg font-bold">Offer Number</th>
-                            <th class="text-lg font-bold">Day</th>
-                            <th class="text-lg font-bold">Time</th>
-                            <th class="text-lg font-bold">Room</th>
+                            <th class="text-xs md:text-lg font-bold">Subject</th>
+                            <th class="text-xs md:text-lg font-bold">Offer Number</th>
+                            <th class="text-xs md:text-lg font-bold">Day</th>
+                            <th class="text-xs md:text-lg font-bold">Time</th>
+                            <th class="text-xs md:text-lg font-bold">Room</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -66,24 +66,24 @@
                 </div>
             </div>
 
-            <!-- Right Side (Duplicate) -->
-            <div class="md:w-1/2">
+            <!-- Right Side -->
+            <div class="w-full md:w-1/2">
                 <!-- Day Selector -->
-                <h1 class="text-2xl font-bold text-center mb-4 mt-5">Project & Activity Schedule for the week</h1>
+                <h1 class="text-xl md:text-2xl font-bold text-center mb-4 mt-5">Project & Activity Schedule for the week</h1>
                 <div class="overflow-x-auto my-8">
-                    <div class="mx-auto w-fit">
+                    <div class="mx-auto w-full md:w-fit">
                     <table class="table table-lg bg-base-100 shadow-lg rounded-xl">
                         <thead>
-                        <tr>
-                            <th onclick="handleSubjectClick('SIA 101')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">SIA 101</th>
-                            <th onclick="handleSubjectClick('GEC 8')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">GEC 8</th>
-                            <th onclick="handleSubjectClick('PF 102')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">PF 102</th>
-                            <th onclick="handleSubjectClick('GEC 9')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">GEC 9</th>
-                            <th onclick="handleSubjectClick('GEC 7')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">GEC 7</th>
-                            <th onclick="handleSubjectClick('IM 102')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">IM 102</th>
-                            <th onclick="handleSubjectClick('NET 101')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">NET 101</th>
-                            <th onclick="handleSubjectClick('CC 106')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">CC 106</th>
-                            <th onclick="handleSubjectClick('PATH-FIT 4')" class="cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-6 py-3">PATH-FIT 4</th>
+                        <tr class="flex flex-wrap md:table-row">
+                            <th onclick="handleSubjectClick('SIA 101')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">SIA 101</th>
+                            <th onclick="handleSubjectClick('GEC 8')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">GEC 8</th>
+                            <th onclick="handleSubjectClick('PF 102')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">PF 102</th>
+                            <th onclick="handleSubjectClick('GEC 9')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">GEC 9</th>
+                            <th onclick="handleSubjectClick('GEC 7')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">GEC 7</th>
+                            <th onclick="handleSubjectClick('IM 102')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">IM 102</th>
+                            <th onclick="handleSubjectClick('NET 101')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">NET 101</th>
+                            <th onclick="handleSubjectClick('CC 106')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">CC 106</th>
+                            <th onclick="handleSubjectClick('PATH-FIT 4')" class="w-1/3 md:w-auto cursor-pointer hover:bg-primary hover:text-white transition-all duration-200 text-center px-2 md:px-6 py-3 text-xs md:text-base">PATH-FIT 4</th>
                         </tr>
                         </thead>
                     </table>
@@ -92,15 +92,15 @@
             
                 <!-- Schedule Table -->
                 <div class="overflow-x-auto mb-10">
-                    <div class="mx-auto w-full px-4">
+                    <div class="mx-auto w-full px-2 md:px-4">
                     <table class="table table-zebra table-lg bg-base-100 shadow-lg rounded-xl">
                         <thead>
                         <tr class="bg-base-300">
-                            <th class="text-lg font-bold">Project/Activity</th>
-                            <th class="text-lg font-bold">Priority Level</th>
-                            <th class="text-lg font-bold">Week</th>
-                            <th class="text-lg font-bold">Due Date</th>
-                            <th class="text-lg font-bold">Status</th>
+                            <th class="text-xs md:text-lg font-bold">Project/Activity</th>
+                            <th class="text-xs md:text-lg font-bold">Priority Level</th>
+                            <th class="text-xs md:text-lg font-bold">Week</th>
+                            <th class="text-xs md:text-lg font-bold">Due Date</th>
+                            <th class="text-xs md:text-lg font-bold">Status</th>
                         </tr>
                         </thead>
                         <tbody>
