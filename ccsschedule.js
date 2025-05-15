@@ -4,7 +4,7 @@ const scheduleData = {
     ],
     Tuesday: [
       { subject: "GEC 8", offer: "52519", time: "10:30 AM - 12:00 PM", room: "VR4" },
-      { subject: "PF 102", offer: "83634", time: "01:00 PM - 02:00 PM", room: "A203" },
+      { subject: "PF 102", offer: "83634", time: "01:00 PM - 02:00 PM", room: "A203" }, 
       { subject: "GEC 9", offer: "52533", time: "02:30 PM - 04:00 PM", room: "E303(VR4)" },
       { subject: "GEC 7", offer: "52506", time: "04:00 PM - 05:30 PM", room: "E206" },
       { subject: "IM 102", offer: "83637", time: "05:30 PM - 06:30 PM", room: "A203" }
@@ -44,18 +44,18 @@ const scheduleData = {
       const row = document.createElement('tr');
       row.className = 'hover:bg-base-200 transition-colors duration-150';
       row.innerHTML = `
-        <td class="font-medium">${item.subject}</td>
-        <td>${item.offer}</td>
-        <td>${day}</td>
-        <td>${item.time}</td>
-        <td>${item.room}</td>
+        <td class="font-medium text-sm md:text-base">${item.subject}</td>
+        <td class="text-xs md:text-sm">${item.offer}</td>
+        <td class="text-xs md:text-sm">${day}</td>
+        <td class="text-xs md:text-sm">${item.time}</td>
+        <td class="text-xs md:text-sm">${item.room}</td>
       `;
       tableBody.appendChild(row);
     });
 
     if (data.length === 0) {
       const row = document.createElement('tr');
-      row.innerHTML = `<td colspan="7" class="text-center text-gray-500 py-8 text-lg">No classes scheduled for ${day}.</td>`;
+      row.innerHTML = `<td colspan="7" class="text-center text-gray-500 py-4 md:py-6 text-sm md:text-base">No classes scheduled for ${day}.</td>`;
       tableBody.appendChild(row);
     }
   }
@@ -74,6 +74,7 @@ const scheduleData = {
         hours < 18 ? 'Good Afternoon Programmer!' :
         'Good Evening Programmer!';
 
+      greetingElement.className = 'greeting text-sm md:text-base lg:text-lg';
       greetingElement.textContent = greetingMessage;
     }
 

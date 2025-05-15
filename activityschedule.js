@@ -53,7 +53,7 @@ function handleSubjectClick(subject) {
   if (data.length === 0) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
-      <td colspan="5" class="text-center text-gray-500 py-8 text-lg font-medium">
+      <td colspan="5" class="text-center text-gray-500 py-4 text-xs sm:text-sm md:text-base">
         No Projects or Activities found for ${subject}
       </td>
     `;
@@ -80,14 +80,14 @@ function handleSubjectClick(subject) {
     }[item.status] || 'badge-ghost';
 
     row.innerHTML = `
-      <td class="font-medium">${item.project}</td>
+      <td class="text-xs sm:text-sm md:text-base font-medium">${item.project}</td>
       <td>
-        <span class="badge ${priorityClass} font-medium">${item.priority}</span>
+        <span class="badge ${priorityClass} text-xs sm:text-sm">${item.priority}</span>
       </td>
-      <td class="font-medium">${item.week}</td>
-      <td class="font-medium">${item.dueDate}</td>
+      <td class="text-xs sm:text-sm md:text-base">${item.week}</td>
+      <td class="text-xs sm:text-sm md:text-base">${item.dueDate}</td>
       <td>
-        <span class="badge ${statusClass} font-medium">${item.status}</span>
+        <span class="badge ${statusClass} text-xs sm:text-sm">${item.status}</span>
       </td>
     `;
     tableBody.appendChild(row);
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.querySelector('.md\\:w-1\\/2:last-child table.table-zebra tbody');
   tableBody.innerHTML = `
     <tr>
-      <td colspan="5" class="text-center text-gray-500 py-8 text-lg font-medium">
+      <td colspan="5" class="text-center text-gray-500 py-4 text-xs sm:text-sm md:text-base">
         Select a subject to view its projects and activities
       </td>
     </tr>
